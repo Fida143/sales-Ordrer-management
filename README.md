@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+###  Demo Images
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/f01d81ac-5aad-424b-a1db-0c194c7a94c2)
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/f252e99d-7af4-4322-bf6b-1756aaa7a1a0)
+
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/ded48df5-6c0d-4ac7-946c-03ce176139df)
+
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/45935e9c-9194-4195-a7bf-2c92ed7fd03b)
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/42f5c954-7f4d-425a-95ce-c6da31e59304)
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/ee2d3595-4273-4db1-8362-561ca0dc3d76)
+
+![image](https://github.com/Fida143/sales-Ordrer-management/assets/101417366/4b125c70-312f-45f3-96f7-0699cb9714c9)
