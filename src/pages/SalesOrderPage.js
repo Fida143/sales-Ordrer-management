@@ -41,15 +41,14 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import { Multiselect } from "multiselect-react-dropdown";
 import { product } from "../data/product";
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { useToast } from "@chakra-ui/react";
 
 const addSalesOrdSchema = Yup.object({
-  // invoice_date: Yup.string().required(" Invoice Date  is Required"),
-  // invoice_number: Yup.string().required("Invoice Number is Required"),
+   invoice_date: Yup.string().required(" Invoice Date  is Required"),
+   invoice_number: Yup.string().required("Invoice Number is Required"),
   // customer: Yup.string().required("Customer is Required"),
 });
 const SalesOrderPage = () => {
@@ -82,21 +81,7 @@ const SalesOrderPage = () => {
     total_items: "",
   });
 
-  console.log(products, "pr");
-  // const formik = useFormik({
-  //   initialValues: {
-  //     invoice_number: "",
-  //     invoice_date: "",
-  //     customer: "",
-  //     products: "",
-  //     is_paid: false,
-  //   },
-  //   onSubmit: (values, actions) => {
-  //     alert(JSON.stringify(values, null, 5));
-  //     actions.resetForm();
-  //     console.log(formik, "fm");
-  //   },
-  // });
+ 
 
   //  active tab && completed
 
@@ -223,8 +208,7 @@ const SalesOrderPage = () => {
               }}
               validationSchema={addSalesOrdSchema}
               onSubmit={(values, actions) => {
-                alert(JSON.stringify(values, null, 3));
-                // setProducts([...products, { ...values }]);
+              //  alert(JSON.stringify(values, null, 3));
                 setProducts([
                   ...products,
                   {
@@ -281,14 +265,7 @@ const SalesOrderPage = () => {
                 });
                 onClose();
               }}
-              // alert(JSON.stringify(values, null, 2));
-              //   setTimeout(() => {
-              //     alert(JSON.stringify(values, null, 2));
-              //     actions.setSubmitting(false);
-              //   }, 1000);
-              //   actions.resetForm();
-              //   console.log(values, "vals");
-              // }}
+        
             >
               {(props) => (
                 <Form>
@@ -354,19 +331,7 @@ const SalesOrderPage = () => {
                           )}
                         </Field>
                       </HStack>
-                      {/* <FormControl isRequired>
-                        <FormLabel>Customers</FormLabel>
-                        <Select
-                          placeholder="Select a Customer"
-                          name="customer"
-                          onChange={formik.handleChange}
-                          value={formik.values.customer}
-                        >
-                          <option>Customer1</option>
-                          <option>Customer2</option>
-                          <option>Customer3</option>
-                        </Select>
-                      </FormControl> */}
+                 
                       <Field name="customer">
                         {({ field, form }) => (
                           <FormControl
@@ -513,38 +478,7 @@ const SalesOrderPage = () => {
                         )}
                       </Field>
 
-                      {/* <FormControl isRequired>
-                        <FormLabel>All Products</FormLabel>
-                        <Multiselect
-                          placeholder="Select a Product"
-                          options={options}
-                          displayValue="productOption"
-                          w="full"
-                          showArrow="true"
-                          name="products"
-                          onChange={formik.handleChange}
-                          value={formik.values.products}
-                        />
-                        <Accordion allowMultiple mt={3}>
-                          <AccordionItem>
-                            <h2>
-                              <AccordionButton>
-                                <Box as="span" flex="1" textAlign="left">
-                                  Section 1 title
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-                            </h2>
-                            <AccordionPanel pb={4}>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut
-                              aliquip ex ea commodo consequat.
-                            </AccordionPanel>
-                          </AccordionItem>
-                        </Accordion>
-                      </FormControl> */}
+            
                       <HStack w="full" justify={"space-between"} mt={3}>
                         <Checkbox
                           name="is_paid"
@@ -612,8 +546,7 @@ const SalesOrderPage = () => {
               }}
               validationSchema={addSalesOrdSchema}
               onSubmit={(values, actions) => {
-                alert(JSON.stringify(values, null, 3));
-                // setProducts([...products, { ...values }]);
+               // alert(JSON.stringify(values, null, 3));
                 setProducts([
                   ...products,
                   {
@@ -670,14 +603,7 @@ const SalesOrderPage = () => {
                 });
                 onClose();
               }}
-              // alert(JSON.stringify(values, null, 2));
-              //   setTimeout(() => {
-              //     alert(JSON.stringify(values, null, 2));
-              //     actions.setSubmitting(false);
-              //   }, 1000);
-              //   actions.resetForm();
-              //   console.log(values, "vals");
-              // }}
+           
             >
               {(props) => (
                 <Form>
@@ -743,19 +669,7 @@ const SalesOrderPage = () => {
                           )}
                         </Field>
                       </HStack>
-                      {/* <FormControl isRequired>
-                                <FormLabel>Customers</FormLabel>
-                                <Select
-                                  placeholder="Select a Customer"
-                                  name="customer"
-                                  onChange={formik.handleChange}
-                                  value={formik.values.customer}
-                                >
-                                  <option>Customer1</option>
-                                  <option>Customer2</option>
-                                  <option>Customer3</option>
-                                </Select>
-                              </FormControl> */}
+                   
                       <Field name="customer">
                         {({ field, form }) => (
                           <FormControl
@@ -826,11 +740,7 @@ const SalesOrderPage = () => {
                                       >
                                         <Flex justifyContent="space-between">
                                           <Text>{i + 1} SKU 3 (5 kg)</Text>
-                                          {/* <Text>{`${i + 1}. SKU ${
-                                                    product.sku.id
-                                                  } (${
-                                                    product.sku.quantity_in_inventory
-                                                  } ${product.sku.unit} )`}</Text> */}
+                                        
                                           <Badge
                                             colorScheme="gray"
                                             fontWeight={500}
@@ -902,38 +812,7 @@ const SalesOrderPage = () => {
                         )}
                       </Field>
 
-                      {/* <FormControl isRequired>
-                                <FormLabel>All Products</FormLabel>
-                                <Multiselect
-                                  placeholder="Select a Product"
-                                  options={options}
-                                  displayValue="productOption"
-                                  w="full"
-                                  showArrow="true"
-                                  name="products"
-                                  onChange={formik.handleChange}
-                                  value={formik.values.products}
-                                />
-                                <Accordion allowMultiple mt={3}>
-                                  <AccordionItem>
-                                    <h2>
-                                      <AccordionButton>
-                                        <Box as="span" flex="1" textAlign="left">
-                                          Section 1 title
-                                        </Box>
-                                        <AccordionIcon />
-                                      </AccordionButton>
-                                    </h2>
-                                    <AccordionPanel pb={4}>
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing
-                                      elit, sed do eiusmod tempor incididunt ut labore
-                                      et dolore magna aliqua. Ut enim ad minim veniam,
-                                      quis nostrud exercitation ullamco laboris nisi ut
-                                      aliquip ex ea commodo consequat.
-                                    </AccordionPanel>
-                                  </AccordionItem>
-                                </Accordion>
-                              </FormControl> */}
+                    
                       <HStack w="full" justify={"space-between"} mt={3}>
                         <Checkbox
                           name="is_paid"
