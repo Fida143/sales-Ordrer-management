@@ -27,147 +27,10 @@ const loginSchema = Yup.object({
 const LoginPage = () => {
   const toast = useToast();
   const navigate = useNavigate();
-  // const [input, setInput] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-  // const [isInvalid, setIsInvalid] = useState({ email: false, password: false });
-  // const handleInputChange = (e) => {
-  //   setInput({ ...input, [e.target.name]: e.target.value });
-  // };
-  // // const handleValidation(input){
-  // //     setInput({...isInvalid,[input.email]:input.email===''? true:''})
-  // // }
-  // const handleLogin = (e) => {
-  //   // e.preventDefault();
-  //   // handleValidation(input);
-  //   console.log(input, "in");
-  //   if (input.email == "admin@gmail.com" && input.password == "1234") {
-  //     toast({
-  //       title: "Successfully loged in",
-  //       description: "You are authorised user",
-  //       status: "success",
-  //       duration: 9000,
-  //       isClosable: true,
-  //     });
-  //     return redirect("/sales-order");
-  //   } else {
-  //     toast({
-  //       title: "Unauthorised User.",
-  //       description: "You are unauthorised user .",
-  //       status: "error",
-  //       duration: 9000,
-  //       isClosable: true,
-  //     });
-  //   }
-  // };
-  // const formik = useFormik({
-  //   initialValues: {
-  //     email: "",
-  //     password: "",
-  //   },
-  //   onSubmit: (values) => {
-  //     console.log(values);
-  //   },
-  // });
-  // console.log(formik, "fmik");
-  // const isError = input === "";
-  // function validateEmail(value) {
-  //   let error;
-  //   if (!value) {
-  //     error = "Email is required";
-  //   }
 
-  //   return error;
-  // }
-  // function validatePassword(value) {
-  //   let error;
-  //   if (!value) {
-  //     error = "Password is required";
-  //   }
-
-  //   return error;
-  // }
 
   return (
-    // <>
-    //   <Box
-    //     w={["full", "md"]}
-    //     p={[8, 10]}
-    //     mt={[20, "10vh"]}
-    //     mx="auto"
-    //     border={["none", "1px"]}
-    //     borderColor={["", "gray.300"]}
-    //     borderRadius={10}
-    //   >
-    //     <Form onSubmit={formik.handleSubmit}>
-    //       <VStack spacing={4} align="flex-start" w="full">
-    //         <VStack
-    //           spacing={1}
-    //           align={["flex-start", "center"]}
-    //           w="full"
-    //           mb={3}
-    //         >
-    //           <Heading>Login</Heading>
-    //           <Text> Enter Your E-mail and Password to login</Text>
-    //         </VStack>
-    //       </VStack>
-    //       <FormControl isRequired>
-    //         <FormLabel>E-mail Address</FormLabel>
-    //         <Input
-    //           rounded="none"
-    //           variant="filled"
-    //           type="email"
-    //           name="email"
-    //           placeholder="eg- admin@gmail.com"
-    //           value={input.email}
-    //           onChange={(e) => handleInputChange(e)}
-    //         />
-    //         {!isInvalid ? (
-    //           ""
-    //         ) : (
-    //           <FormErrorMessage>Email is required.</FormErrorMessage>
-    //         )}
-    //       </FormControl>
-    //       <FormControl isRequired>
-    //         <FormLabel>Password</FormLabel>
-    //         <Input
-    //           rounded="none"
-    //           variant="filled"
-    //           type="password"
-    //           name="password"
-    //           value={input.password}
-    //           placeholder="eg- 1234"
-    //           onChange={(e) => handleInputChange(e)}
-    //         />
-    //         {!isInvalid ? (
-    //           ""
-    //         ) : (
-    //           <FormErrorMessage>Password is required.</FormErrorMessage>
-    //         )}
-    //       </FormControl>
-    //       <HStack w="full" justify={"space-between"} mt={3}>
-    //         <Checkbox colorScheme="teal">Remember me</Checkbox>
-    //         <Button variant="link" colorScheme="blue">
-    //           Forgot Password ?
-    //         </Button>
-    //       </HStack>
-    //       <Button
-    //         rounded="none"
-    //         backgroundColor={"#3DA288"}
-    //         color={"white"}
-    //         w="full"
-    //         mt={3}
-    //         alignSelf="end"
-    //         _hover={{ bg: "green.300" }}
-    //         type="submit"
-    //         onClick={(e) => handleLogin(e)}
-    //       >
-    //         Login
-    //       </Button>
-    //     </Form>
-    //   </Box>
-    // </>
+ 
     <>
       <Box
         w={["full", "md"]}
@@ -182,7 +45,7 @@ const LoginPage = () => {
           initialValues={{ email: "", password: "", reminder: false }}
           validationSchema={loginSchema}
           onSubmit={(values, actions) => {
-            alert(JSON.stringify(values, null, 2));
+          //  alert(JSON.stringify(values, null, 2));
             actions.resetForm();
             if (
               values.email === "admin@gmail.com" ||
@@ -205,11 +68,7 @@ const LoginPage = () => {
                 isClosable: true,
               });
             }
-            // setTimeout(() => {
-            //   alert(JSON.stringify(values, null, 2));
-            //   actions.setSubmitting(false);
-            // }, 1000);
-            console.log(values, "vals");
+       
           }}
         >
           {(props) => (
